@@ -1,8 +1,8 @@
 import axios from './api'
 
 const consumerTagToFoodTagApi = {
-    getConsumerTagToFoodTagListByConsumerTagId: (consumerTagId: string) => {
-        return axios.get(`v1/consumerTagToFoodTag/listByConsumerTagID?consumerTagId=${ consumerTagId }`)
+    getConsumerTagToFoodTagListByConsumerTagId: (consumerTagId: string, currentEatModeId: string) => {
+        return axios.get(`v1/consumerTagToFoodTag/listByConsumerTagAndEatMode?consumerTagId=${ consumerTagId }&currentEatModeId=${ currentEatModeId }`)
     },
 }
 
