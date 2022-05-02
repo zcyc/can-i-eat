@@ -8,6 +8,9 @@ const foodApi = {
     getFoodListByFoodTagIdList: (postData: { foodTagIdList: string[] }) => {
         return axios.post(`v1/food/listByFoodTagList`, postData)
     },
+    getFoodListByFoodTagIdsAndConsumerTagIdAndEatMode: (postData: { foodTagIdList: string[] }) => {
+        return axios.post(`v1/food/listByFoodTagListAndConsumerTagId`, postData)
+    },
 }
 
 export default foodApi

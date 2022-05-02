@@ -58,9 +58,11 @@ function App() {
         const foodTagIdList = consumerTagToFoodTagList.map(item => item.foodTagId)
 
         const postData = {
-            'foodTagIdList': foodTagIdList
+            'foodTagIdList': foodTagIdList,
+            'consumerTagId': currentConsumerTag.id,
+            'eatMode': currentEatMode.id
         }
-        foodApi.getFoodListByFoodTagIdList(postData).then(response => {
+        foodApi.getFoodListByFoodTagIdsAndConsumerTagIdAndEatMode(postData).then(response => {
             console.log('getFoodListByFoodTagIdList', response)
             setFoodList(response.data)
         })
